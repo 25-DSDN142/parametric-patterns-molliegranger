@@ -26,8 +26,8 @@ function wallpaper_background() {
   if(day== true){
   background(204, 235, 252); //day sky  
   }
-
 }
+
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 strokeWeight(0);
@@ -36,7 +36,7 @@ strokeWeight(0);
 
 fill(252, 238, 177); // star colour
 
-if(day == true) {
+if (day = true) {
 fill (255, 200, 0);// sun colour
 }
 
@@ -58,7 +58,5 @@ fill(255); // cloud colour
 ellipse(-10, 20, 35);
 ellipse(10, 15, 40, 48);
 ellipse(30, 20, 35);
-
-
 
 }
