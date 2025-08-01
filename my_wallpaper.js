@@ -9,7 +9,7 @@ let rayL4 = 150
 let day = true;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
  
   
   pWallpaper.resolution(NINE_LANDSCAPE);
@@ -41,19 +41,24 @@ fill (255, 200, 0);// sun colour
 }
 
 
-circle(100,100, circleSize); //middle of sun
+circle(100,100, circleSize); //middle of sun/star
 
 quad(90, 100, 100, rayL, 110, 100, 100, rayL2); //vertical rays
 quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal rays
 
-
-
-
  push()
-translate(100,100)
-rotate(45)
+ translate(100,100)
+ rotate(45)
  quad(100-90, 100-100, 100-100, 100-rayL3, 100-110, 100-100, 100-100, 100-rayL4); //diagonal rays /
-quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // diagonal rays \
+ quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // diagonal rays \
 
  pop()
+
+fill(255); // cloud colour
+ellipse(-10, 20, 35);
+ellipse(10, 15, 40, 48);
+ellipse(30, 20, 35);
+
+
+
 }
