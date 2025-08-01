@@ -32,33 +32,28 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 strokeWeight(0);
 
-fill(255,255,255)
 
-  // OPEN fill mode.
-  arc(50, 50, 80, 80, 0, PI + QUARTER_PI, OPEN);
-
-  ;
-}
 
 fill(252, 238, 177); // star colour
-if(day == true) {
 
+if(day == true) {
 fill (255, 200, 0);// sun colour
 }
 
-//circle(100,100, circleSize); //middle of sun
 
-//quad(90, 100, 100, rayL, 110, 100, 100, rayL2); //vertical rays
-//quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal rays
+circle(100,100, circleSize); //middle of sun
+
+quad(90, 100, 100, rayL, 110, 100, 100, rayL2); //vertical rays
+quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal rays
 
 
 
 
- //push()
-// translate(100,100)
- //rotate(45)
- //quad(100-90, 100-100, 100-100, 100-rayL3, 100-110, 100-100, 100-100, 100-rayL4); //diagonal rays /
-// quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // diagonal rays \
+ push()
+translate(100,100)
+rotate(45)
+ quad(100-90, 100-100, 100-100, 100-rayL3, 100-110, 100-100, 100-100, 100-rayL4); //diagonal rays /
+quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // diagonal rays \
 
- //pop()
-
+ pop()
+}
