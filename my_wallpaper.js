@@ -1,12 +1,12 @@
 //your parameter variables go here!
 let circleSize = 60
 
-let rayL = 0
-let rayL2 = 200
+let rayL = 200
+let rayL2 = 0
 let rayL3 = 0
 let rayL4 = 200
 
-let day = true;
+let day = false;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GLIDE_WALLPAPER);
@@ -41,17 +41,25 @@ if(day == true) {
 }
 
 
-circle(100,100, circleSize);
+circle(100,100, circleSize); //middle of sun
 
-quad(90, 100, 100, rayL, 110, 100, 100, rayL2); //vertical
-quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal
+quad(90, 100, 100, rayL, 110, 100, 100, rayL2); //vertical rays
+quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal rays
+ 
 
  push()
  translate(100,100)
  rotate(45)
- quad(100-90, 100-100, 100-100, 100-rayL3, 100-110, 100-100, 100-100, 100-rayL4); //vertical
- quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // horisontal
+ quad(100-90, 100-100, 100-100, 100-rayL3, 100-110, 100-100, 100-100, 100-rayL4); //diagonal rays
+ quad(100-100, 100-90, 100-rayL3, 100-100, 100-100, 100-110, 100-rayL4, 100-100); // diagonal rays
 
  pop()
+
+ if (day == false){
+let rayL = 200
+let rayL2 = 0
+let rayL3 = 0
+let rayL4 = 200}
+
 
 }
