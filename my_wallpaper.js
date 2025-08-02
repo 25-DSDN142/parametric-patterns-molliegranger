@@ -1,5 +1,5 @@
 //your parameter variables go here!
-let circleSize = 60
+let circleSize = 0
 
 let rayL = 150
 let rayL2 = 50
@@ -7,6 +7,7 @@ let rayL3 = 50
 let rayL4 = 150
 
 let day = true;
+let storm = false;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -32,14 +33,11 @@ function wallpaper_background() {
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
 strokeWeight(0);
 
-
-
-fill(252, 238, 177); // star colour
-
 if (day = true) {
 fill (255, 200, 0);// sun colour
 }
 
+fill(252, 238, 177); // star colour
 
 circle(100,100, circleSize); //middle of sun/star
 
@@ -54,9 +52,15 @@ quad(100, 90, rayL, 100, 100, 110, rayL2, 100); // horisontal rays
 
  pop()
 
-fill(255); // cloud colour
-ellipse(-10, 20, 35);
-ellipse(10, 15, 40, 48);
-ellipse(30, 20, 35);
+
+ if (storm = true) {
+fill(112, 128, 156); // day cloud colour
+}
+fill(255); // night cloud colour
+
+ellipse(-20, 5, 35);
+ellipse(0, 0, 40, 48);
+ellipse(20, 5, 35);
+
 
 }
