@@ -249,3 +249,73 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
+
+/////////////////////////////////
+
+Wallpaper 8:
+
+//your parameter variables go here!
+//big sun/star/moon apperance
+let circleSize = 35 //size of sun/star center
+let showbigstar = false // show or hide big sun/star
+let crescent = false // show cresent moon shape if night 
+
+//ray lengths
+let rayL = 70 // east and south pointing rays
+let rayL2 = 130 // north and west pointing rays
+let rayL3 = 70 // south-east and south-west pointing rays
+let rayL4 = 130 // north-west and north-east pointing rays
+
+//sky and weather
+let day = true //change between day and night background
+let showcloud = true //show or hide clouds
+let darkcloud = false  //cloud colour, true: night/stormy, false: day/white 
+
+//small stars
+let showlittlestars = false // show or hide little star
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+/////////////////////////////////
+
+Wallpaper 9:
+
+//your parameter variables go here!
+//big sun/star/moon apperance
+let circleSize = 70 //size of sun/star center
+let showbigstar = true // show or hide big sun/star
+let crescent = true // show cresent moon shape if night 
+
+//ray lengths
+let rayL = 0 // east and south pointing rays
+let rayL2 = 0 // north and west pointing rays
+let rayL3 = 0 // south-east and south-west pointing rays
+let rayL4 = 0 // north-west and north-east pointing rays
+
+//sky and weather
+let day = false //change between day and night background
+let showcloud = true //show or hide clouds
+let darkcloud = true  //cloud colour, true: night/stormy, false: day/white 
+
+//small stars
+let showlittlestars = false // show or hide little star
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
